@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 
 #For Heroku Server Web App
 from gevent.pywsgi import WSGIServer
-import pickle
+import pickle5 as pickle
 # Define a flask app
 app = Flask(__name__)
 
