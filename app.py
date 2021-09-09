@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 #Load your trained model
 
-model= joblib.load(open('model.pickle', 'rb'))
+model= joblib.load(open('model.sav', 'rb'))
 
 
 
