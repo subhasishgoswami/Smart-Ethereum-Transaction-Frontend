@@ -6,15 +6,14 @@ from werkzeug.utils import secure_filename
 
 #For Heroku Server Web App
 from gevent.pywsgi import WSGIServer
-import pickle5 as pickle
+import joblib
 # Define a flask app
 app = Flask(__name__)
 
 
-
 #Load your trained model
 
-model= pickle.load(open('model.pickle', 'rb'))
+model= joblib.load(open('model.pickle', 'rb'))
 
 
 
