@@ -10,7 +10,6 @@ Jinja2==2.10
 pycparser==2.18
 six==1.11.0
 WTForms==2.1
-pickle5
 Werkzeug==1.0.1
 Cython== 0.29.20
 numpy
