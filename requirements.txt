@@ -13,6 +13,5 @@ WTForms==2.1
 pickle5
 Werkzeug==1.0.1
 Cython== 0.29.20
-numpy==1.16.6
-gevent==1.2.2
+numpy
 gunicorn==19.10.0
