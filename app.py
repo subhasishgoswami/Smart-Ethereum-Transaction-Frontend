@@ -44,7 +44,7 @@ def ethereum():
                 t= "Between 2 Minutes And 6 Minutes"
             elif s== 4:
                 t= "In More Than 6 Minutes"
-            e= "ethereum"+ str(s)+ ".png"
+            e= "ethereum"+ str(s+1)+ ".png"
             return render_template('ethereum.html', transaction= t, e= e)
             
 
