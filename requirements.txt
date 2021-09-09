@@ -9,7 +9,10 @@ itsdangerous==0.24
 Jinja2==2.10
 pycparser==2.18
 six==1.11.0
-Werkzeug==0.14.1
 WTForms==2.1
-numpy
 pickle5
+Werkzeug==1.0.1
+Cython== 0.29.20
+numpy==1.16.6
+gevent==1.2.2
+gunicorn==19.10.0
