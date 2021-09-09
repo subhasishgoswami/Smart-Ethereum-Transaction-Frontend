@@ -16,3 +16,4 @@ Cython== 0.29.20
 numpy
 gunicorn==19.10.0
 gevent
+sklearn
