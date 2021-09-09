@@ -1,0 +1,198 @@
+<html>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(-45deg, #c5bdbb, #353538, #000000, #363f3d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.signupSection {
+ background:linear-gradient(0deg, rgba(56, 53, 55, 0.8), rgba(39, 39, 39, 0.8));
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  transform: translate( -50%);
+  width: 1100px;
+  height: auto;
+  text-align: center;
+  color: white;
+  
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+.info {
+  width: 800px;
+  text-align: justify;
+  padding-top: 40px;
+  margin: 40px auto 40px;
+  padding-bottom: 40px;
+  h2 {
+    
+    padding-top: 30px;
+    font-weight: 300;
+  }
+  p {
+    width: 50%;
+    font-size: 18px;
+  }
+  .icon {
+    font-size: 8em;
+    padding: 20px 0;
+    color: rgba(10, 180, 180, 1);
+  }
+}
+
+.signupForm {
+  width: 70%;
+  padding: 30px 0;
+  background: rgba(20, 40, 40, .8);
+  transition: .2s;
+  h2 {
+    font-weight: 300;
+  }
+}
+
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+
+#join-btn {
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+  &:hover {
+    background: rgba(20, 20, 20, .8);
+    padding: 10px 80px;
+  }
+}
+
+  img {
+  max-width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: auto;
+  margin: auto;
+}
+
+  
+  .signupForm {
+    width: 70%;
+    padding: 30px 0;
+    background: rgba(20, 40, 40, .8);
+    transition: .2s;
+    h2 {
+      font-weight: 300;
+    }
+  }
+  .infobottom {
+
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    margin-top: 340px; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  .inputFields {
+    margin: 15px 0;
+    font-size: 16px;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid rgba(10, 180, 180, 1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(20, 20, 20, .2);
+    color: white;
+    outline: none;
+  }
+  
+  .noBullet {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #join-btn {
+    border: 1px solid rgba(10, 180, 180, 1);
+    background: rgba(20, 20, 20, .6);
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: .4s;
+    &:hover {
+      background: rgba(20, 20, 20, .8);
+      padding: 10px 80px;
+    }
+  }
+</style>
+<body>
+    <div class="signupSection">
+        <div class= "info">
+            <h2>Smart Ethereum Transactions</h2>
+       <p>
+        The gas mechanism on the Ethereum blockchain attempts to set charges for every smart contract operation in order to prevent infinite control of computational resources by executing transactions. To satisfy this requirement, users need to specify in their transactions how much gas fees (in terms of gas limit and gas price) they would like to pay for. In essence, these gas fees are paid to the miners in return for their computational services. Naturally, miners tend to maximize their profits by considering the transactions with higher gas fees, and as a result, the transactions with lower gas fees remain in the waiting pool for a long time. This web app is a scaled down version of a machine learning model based for prediction of transaction waiting time on ethereum blockchain based on transaction parameters. This a scaled down version, for the complete theoritical work please refer to the research paper.
+       </p>
+       <br>
+       <img src={{url_for('static', filename= 'transaction.png')}}>
+       <br>
+       <h4>The Model Works On Following Parameters-</h4>
+       <ul>
+        <li><h4>Gas Price</h4><p>A amount of ETH paid per unit of gas incurred against the execution of the transaction.</p></li>
+        <li><h4>Gas Price</h4><p>A amount of ETH paid per unit of gas incurred against the execution of the transaction.</p></li>
+        <li><h4>Block Difficulty</h4><p>It denotes difficulty level of the block containing the transaction.</p></li>
+        <li><h4></h4><p>It indicates the hour of the day between 0 to 23 when a particular transaction was created</p></li>
+        <li><h4>Transaction Type</h4><p>It indicates whether a transaction is for a contract adress or account address</p></li>
+        <li><h4>Time To Mine Last Block</h4><p>Time taken to mine the last block on the blockchain</p></li>
+        <li><h4>Mining Rate</h4><p>Number of blocks mined in last x seconds</p></li>
+      </ul> 
+    </div>
+      </div>
+      
+    
+</body>
+</html>
